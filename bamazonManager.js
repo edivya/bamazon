@@ -139,7 +139,7 @@ function viewLowInventory() {
             if (user.confirm === true) {
                 console.log(lowInventoryColor("The following items have low inventory: \n"));
 
-                var query = "SELECT ID, PRODUCT_NAME, STOCK_QUANTITY FROM PRODUCTS WHERE STOCK_QUANTITY <= '5'";
+                var query = "SELECT ID, products_name, STOCK_QUANTITY FROM PRODUCTS WHERE STOCK_QUANTITY <= '5'";
 
                 connection.query(query, function (err, results) {
                     if (err) throw err;
@@ -147,7 +147,7 @@ function viewLowInventory() {
                     for (var i = 0; i < results.length; i++) {
                         itemsInString = '';
                         itemsInString += 'Item ID: ' + results[i].ID + ' || ';
-                        itemsInString += 'Product Name: ' + results[i].PRODUCT_NAME + ' || ';
+                        itemsInString += 'Products Name: ' + results[i].products_name + ' || ';
                         itemsInString += 'Stock Quantity: ' + results[i].STOCK_QUANTITY;
 
                         console.log("\n" + itemsInString);
@@ -176,7 +176,7 @@ function getItemsforInventory() {
         for (var i = 0; i < results.length; i++) {
             itemsInString = '';
             itemsInString += 'Item ID: ' + results[i].ID + ' || ';
-            itemsInString += 'Product: ' + results[i].PRODUCT_NAME + ' || ';
+            itemsInString += 'Product: ' + results[i].products_name + ' || ';
             itemsInString += 'Product: ' + results[i].STOCK_QUANTITY;
 
 
@@ -276,7 +276,7 @@ function getItemsforInventory() {
                 connection.query(
                     "INSERT INTO PRODUCTS SET ?",
                     {
-                        PRODUCT_NAME: answer.product,
+                        products_name: answer.product,
                         DEPARTMENT_ID: answer.department,
                         PRICE: answer.price,
                         STOCK_QUANTITY: answer.stock
