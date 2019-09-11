@@ -92,7 +92,7 @@ function createNewDepartment() {
             connection.query(
                 "INSERT INTO DEPARTMENTS SET ?",
                 {
-                    DEPARTMENT_NAME: answer.department,
+                    department_id: answer.department,
                     OVERHEAD_COSTS: answer.overhead_cost
                 },
                 function (err) {
@@ -114,7 +114,7 @@ function viewProductSales() {
 
         for (i = 0; i < res.length; i++) {
             table.push(
-                [res[i].ID, res[i].DEPARTMENT_NAME, "$" + res[i].OVERHEAD_COSTS]
+                [res[i].ID, res[i].department_id, "$" + res[i].OVERHEAD_COSTS]
             );
         }
         console.log(table.toString());

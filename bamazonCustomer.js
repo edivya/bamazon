@@ -185,7 +185,7 @@ function electronics() {
     console.log(textColor("Thank you for purchasing from our Electronics Department!\n"));
     console.log(textColor("The following items are available. \n"));
 
-    var query = "SELECT ID, PRODUCT_NAME, PRICE FROM PRODUCTS WHERE DEPARTMENT_NAME = 'ELECTRONICS'";
+    var query = "SELECT ID, products_name, PRICE FROM PRODUCTS WHERE DEPARTMENT_ID = 'ELECTRONICS'";
 
     connection.query(query, function (err, results) {
         if (err) throw err;
@@ -193,7 +193,7 @@ function electronics() {
         for (var i = 0; i < results.length; i++) {
             itemsInString = '';
             itemsInString += 'Item ID: ' + results[i].ID + ' || ';
-            itemsInString += 'Product Name: ' + results[i].PRODUCT_NAME + ' || ';
+            itemsInString += 'Product Name: ' + results[i].products_name + ' || ';
             itemsInString += 'Price: $' + results[i].PRICE;
 
             console.log("\n" + itemsInString);
@@ -211,7 +211,7 @@ function art() {
     console.log("Thank you for purchasing from from our Art Department!\n")
     console.log(inquirerColor("Items Available: \n"));
 
-    var query = "SELECT ID, PRODUCT_NAME, PRICE FROM PRODUCTS WHERE DEPARTMENT_NAME = 'ART'";
+    var query = "SELECT ID, products_name, PRICE FROM PRODUCTS WHERE DEPARTMENT_ID = 'ART'";
 
     connection.query(query, function (err, results) {
         if (err) throw err;
@@ -219,7 +219,7 @@ function art() {
         for (var i = 0; i < results.length; i++) {
             itemsInString = '';
             itemsInString += 'Item ID: ' + results[i].ID + ' || ';
-            itemsInString += 'Product Name: ' + results[i].PRODUCT_NAME + ' || ';
+            itemsInString += 'Product Name: ' + results[i].products_name + ' || ';
             itemsInString += 'Price: $' + results[i].PRICE;
 
             console.log("\n" + itemsInString);
@@ -237,7 +237,7 @@ function clothing() {
     console.log("Thank you for purchasing from our Clothing & Accessories Department!\n")
     console.log(inquirerColor("Items Available: \n"));
 
-    var query = "SELECT ID, PRODUCT_NAME, PRICE FROM PRODUCTS WHERE DEPARTMENT_NAME = 'CLOTHING/ACCESSORIES'";
+    var query = "SELECT ID, products_name, PRICE FROM PRODUCTS WHERE DEPARTMENT_ID = 'CLOTHING/ACCESSORIES'";
 
     connection.query(query, function (err, results) {
         if (err) throw err;
@@ -245,7 +245,7 @@ function clothing() {
         for (var i = 0; i < results.length; i++) {
             itemsInString = '';
             itemsInString += 'Item ID: ' + results[i].ID + ' || ';
-            itemsInString += 'Product Name: ' + results[i].PRODUCT_NAME + ' || ';
+            itemsInString += 'Product Name: ' + results[i].products_name + ' || ';
             itemsInString += 'Price: $' + results[i].PRICE;
 
             console.log("\n" + itemsInString);
@@ -263,7 +263,7 @@ function collectibles() {
     console.log("Thank you for purchasing from our Collectibles Department!\n")
     console.log(inquirerColor("Items Available: \n"));
 
-    var query = "SELECT ID, PRODUCT_NAME, PRICE FROM PRODUCTS WHERE DEPARTMENT_NAME = 'COLLECTIBLES'";
+    var query = "SELECT ID, products_name, PRICE FROM PRODUCTS WHERE DEPARTMENT_ID = 'COLLECTIBLES'";
 
     connection.query(query, function (err, results) {
         if (err) throw err;
@@ -271,7 +271,7 @@ function collectibles() {
         for (var i = 0; i < results.length; i++) {
             itemsInString = '';
             itemsInString += 'Item ID: ' + results[i].ID + ' || ';
-            itemsInString += 'Product Name: ' + results[i].PRODUCT_NAME + ' || ';
+            itemsInString += 'Product Name: ' + results[i].products_name + ' || ';
             itemsInString += 'Price: $' + results[i].PRICE;
 
             console.log("\n" + itemsInString);
@@ -289,7 +289,7 @@ function jewelry() {
     console.log("Thank you for purchasing from our Jewelry Department!\n")
     console.log(inquirerColor("Items Available: \n"));
 
-    var query = "SELECT ID, PRODUCT_NAME, PRICE FROM PRODUCTS WHERE DEPARTMENT_NAME = 'JEWELRY'";
+    var query = "SELECT ID, products_name, PRICE FROM PRODUCTS WHERE DEPARTMENT_ID = 'JEWELRY'";
 
     connection.query(query, function (err, results) {
         if (err) throw err;
@@ -297,7 +297,7 @@ function jewelry() {
         for (var i = 0; i < results.length; i++) {
             itemsInString = '';
             itemsInString += 'Item ID: ' + results[i].ID + ' || ';
-            itemsInString += 'Product Name: ' + results[i].PRODUCT_NAME + ' || ';
+            itemsInString += 'Product Name: ' + results[i].products_name + ' || ';
             itemsInString += 'Price: $' + results[i].PRICE;
 
             console.log("\n" + itemsInString);
@@ -315,7 +315,7 @@ function  viewAllProducts() {
     console.log("Ever item in Bamazon will be listed below\n")
     console.log(inquirerColor("Items Available: \n"));
 
-    var query = "SELECT ID, PRODUCT_NAME, PRICE FROM PRODUCTS";
+    var query = "SELECT ID, products_name, PRICE FROM PRODUCTS";
 
     connection.query(query, function (err, results) {
         if (err) throw err;
@@ -323,7 +323,7 @@ function  viewAllProducts() {
         for (var i = 0; i < results.length; i++) {
             itemsInString = '';
             itemsInString += 'Item ID: ' + results[i].ID + ' || ';
-            itemsInString += 'Product Name: ' + results[i].PRODUCT_NAME + ' || ';
+            itemsInString += 'Product Name: ' + results[i].products_name + ' || ';
             itemsInString += 'Price: $' + results[i].PRICE;
 
             console.log("\n" + itemsInString);
