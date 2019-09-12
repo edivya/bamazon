@@ -62,10 +62,14 @@ function chooseAction() {// function which prompts the user for what action they
         }])
         .then(function (answer) {
             if (answer.doToday.toUpperCase() === "VIEW PRODUCT SALES BY DEPARTMENT") {
+                
                 //function if the user chooses to view all product sales by department    
+                
                 viewProductSales();
             } else if (answer.doToday.toUpperCase() === "CREATE A NEW DEPARTMENT") {
+                
                 //function if the user chooses to create a new department  
+                
                 createNewDepartment();
             }
         });
@@ -92,7 +96,7 @@ function createNewDepartment() {
             connection.query(
                 "INSERT INTO DEPARTMENTS SET ?",
                 {
-                    department_id: answer.department,
+                    DEPARTMENT_ID: answer.department,
                     OVERHEAD_COSTS: answer.overhead_cost
                 },
                 function (err) {
@@ -114,7 +118,7 @@ function viewProductSales() {
 
         for (i = 0; i < res.length; i++) {
             table.push(
-                [res[i].ID, res[i].department_id, "$" + res[i].OVERHEAD_COSTS]
+                [res[i].ID, res[i].DEPARTMENT_ID, "$" + res[i].OVERHEAD_COSTS]
             );
         }
         console.log(table.toString());
