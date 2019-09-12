@@ -26,5 +26,5 @@ After typing node bamazonManager.js into the prompt, managers are able to contro
 ## Application Flow for Supervisors. ##
 After typing node bamazonSupervisor.js into the prompt, supervisors are able to do two functions:
 1.View Product Sales by Department
-2.Create a New Department: With this option, Supervisors are able to create a new Department such as "Books," as well as the Overhead costs associated with the new department.
+2.Create a New Department: With this option, Supervisors are able to create a new Department such as "Books,Electronic devices" as well as the Overhead costs associated with the new department.
 
