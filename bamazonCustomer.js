@@ -122,7 +122,7 @@ function chooseDepartment() {
 
             message: "Please enter the number for the department you like to shop in today?",
 
-            choices: ["ELECTRONICS", "JEWELRY", "COLLECTIBLES", "CLOTHING/ACCESSORIES", "ART", "VIEW ALL PRODUCTS"]
+            choices: ["ELECTRONICS", "FOOD", "COLLECTIBLES", "CLOTHING/ACCESSORIES", "ART", "VIEW ALL PRODUCTS"]
 
         })
 
