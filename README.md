@@ -9,7 +9,9 @@ Bamazon was created through node.js, MySql, and JavaScript.
 
 ## Application Flow for Customers ##
 Once the proper npms and MySQL is installed, Bamazon is easy to use! After typing node bamazon.js Inquirer will prompt the user to choose a Department category. After a department is chosen, the user will see all items for sale and choose the desired item based on Item ID. If the desired amount is in stock, Bamazon will charge the customer (see first image). If the desired amount is not in stock, Bamazon will inform the customer of how many items are available (see second image) 
-[customer](https://github.com/edivya/bamazon/blob/master/images/customer.jpg)
+## Screenshots
+
+![customer](https://github.com/edivya/bamazon/blob/master/images/customer.jpg)
 
 ## Application Flow for Managers. ##
 After typing node bamazonManager.js into the prompt, managers are able to control the MySQL database through the following commands:
@@ -17,7 +19,9 @@ After typing node bamazonManager.js into the prompt, managers are able to contro
 2.View Low Inventory: This option shows the manager which products have less than 5 items in inventory.
 3.Add New Inventory: When the manager decided to add new inventory, Bamazon first offers every product name and how many are available. The managers are then able to decide which product to add inventory.
 4.Add New Products: The manager is able to add a completely new product, as well as the category, amount, and set-price. 
-[manager](https://github.com/edivya/bamazon/blob/master/images/manager.jpg)
+## Screenshots
+
+![manager](https://github.com/edivya/bamazon/blob/master/images/manager.jpg)
 
 ## Application Flow for Supervisors. ##
 After typing node bamazonSupervisor.js into the prompt, supervisors are able to do two functions:
