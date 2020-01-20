@@ -6,7 +6,8 @@ To use Bamazon, MySQL must first be installed. If it has not been installed, ple
 
 ## Developer's Toolkit ##
 Bamazon was created through:
-1.node.js
+* node.js
+* mysql
 
 ## Application Flow for Customers ##
 Once the proper npms and MySQL is installed, Bamazon is easy to use! After typing node bamazon.js Inquirer will prompt the user to choose a Department category. After a department is chosen, the user will see all items for sale and choose the desired item based on Item ID. If the desired amount is in stock, Bamazon will charge the customer (see first image). If the desired amount is not in stock, Bamazon will inform the customer of how many items are available (see second image) 
