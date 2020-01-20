@@ -5,7 +5,8 @@ Bamazon is an Amazon-like store-front that allows users to view items in differe
 To use Bamazon, MySQL must first be installed. If it has not been installed, please visit the MySql Download Page.. Additionally, the Bamazon requires the following npm's: MySQL (npm install mysql ), Cli-Color (npm install cli-color), inquirer (npm install inquirer), and cli-table (npm install cli-table).
 
 ## Developer's Toolkit ##
-Bamazon was created through node.js, MySql, and JavaScript.
+Bamazon was created through:
+1.node.js
 
 ## Application Flow for Customers ##
 Once the proper npms and MySQL is installed, Bamazon is easy to use! After typing node bamazon.js Inquirer will prompt the user to choose a Department category. After a department is chosen, the user will see all items for sale and choose the desired item based on Item ID. If the desired amount is in stock, Bamazon will charge the customer (see first image). If the desired amount is not in stock, Bamazon will inform the customer of how many items are available (see second image) 
