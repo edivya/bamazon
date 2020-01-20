@@ -3,7 +3,10 @@ Bamazon is an Amazon-like store-front that allows users to view items in differe
 
 ## Computer Installations ##
 To use Bamazon, MySQL must first be installed. If it has not been installed, please visit the MySql Download Page.. Additionally, the Bamazon requires the following npm's: 
- * MySQL (npm install mysql ), Cli-Color (npm install cli-color), inquirer (npm install inquirer), and cli-table (npm install cli-table).
+ * MySQL (npm install mysql )
+ * Cli-Color (npm install cli-color)
+ * inquirer (npm install inquirer) and 
+ * cli-table (npm install cli-table).
 
 ## Developer's Toolkit ##
 Bamazon was created through:
